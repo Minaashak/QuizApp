@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./image/logo.jpg" type="jpg" />
+    <title>Quiz App</title>
+    <!-- ?---BootStrap-CSS -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- ?----Font-Awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- ?---CSS-File -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <main class="all-content">
+      <div class="title">
+        <h1>Quiz APP</h1>
+      </div>
+      <!-- ?---Sitteng-Data -->
+      <section id="settingQ">
+        <div class="container">
+          <div class="row">
+            <div class="all-inputs bg col-lg-10 mx-auto p-4">
+              <div class="inputs">
+                <label for="cat">Category</label>
+                <select id="cat" class="form-control">
+                  <option value="25">Art</option>
+                  <option value="23">History</option>
+                  <option value="27">Animals</option>
+                  <option value="21">Sports</option>
+                  <option value="22">Geography</option>
+                  <option value="18">Science:Computer</option>
+                </select>
+              </div>
+              <div class="diff mt-4">
+                <label for="diff" class="d-block"> Difficulty:</label>
+                <div>
+                  <input
+                    class="my-3"
+                    name="difficulty"
+                    type="radio"
+                    value="easy"
+                    id="easy"
+                    checked
+                  />
+                  <label for="easy">Easy</label>
+                </div>
+                <div>
+                  <input
+                    class="my-3"
+                    name="difficulty"
+                    type="radio"
+                    value="medium"
+                    id="med"
+                  />
+                  <label for="med"> Medium</label>
+                </div>
+                <div>
+                  <input
+                    class="my-3"
+                    name="difficulty"
+                    type="radio"
+                    value="Hard"
+                    id="hard"
+                  />
+                  <label for="hard">Hard</label>
+                </div>
+              </div>
+
+              <div class="num">
+                <label for="">Number Of Question: </label>
+                <input id="numberOfQuestions" type="number" name="Number" class="form-control" />
+              </div>
+              <div id="alertSitting" class="alert alertSetting alert-danger text-center mt-4 d-none" role="alert">
+                <p>Please Choose Number of Questions between 1 to 50</p>
+              </div>
+              <div class="d-flex justify-content-end button">
+                <button id="btnSetting">
+                  <i class="fa-solid fa-paper-plane pe-2"></i> Start
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ?---Questions -->
+      <section id="questions"  class="show">
+        <div class="container">
+          <div class="row">
+            <div class="all-q mx-auto  p-4 bg col-lg-10">
+              <h2 class="text-center fw-bold">Quiz</h2>
+              <div class="q-number d-flex justify-content-between">
+                <div class="check-answer d-flex">
+                  <p id="corect" class="bg-danger  p-3 text-white fw-bold rounded-3 me-2"> False </p>
+                  <p id="inCorect" class="bg-success p-3 text-white fw-bold rounded-3 "> true </p>
+                </div>
+                <p class="bg-warning p-3 fw-bold rounded-5"> <span id="currentQuestion"></span> of <span id="to"> </span> Question </p>
+              </div>
+              <hr class="text-white">
+              <div class="questions">
+                <h2 >Q: <span id="questionQuiz"></span> </h2>
+                <ul id="answerBox">
+                  
+                </ul>
+              </div>
+              <div id="alertQuestions" class="alert alert-danger mt-4 d-none text-center" role="alert">
+                <p>Select Answer...</p>
+              </div>
+              <div class="d-flex justify-content-end button mb-3">
+                <button id="nextQuestion">
+                  <i class="fa-solid fa-paper-plane pe-2"></i> Next
+                </button>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ?Score -->
+      <section id="Score" class="show">
+        <div class="container">
+          <div class="row">
+            <div class="show-s col-lg-10 p-4 bg  mx-auto text-center">
+              <h2>Finish</h2>
+              <hr class="text-white"/>
+              <div class="all-score">
+                <h3>Score</h3>
+                <p id="getScore"></p>
+              </div>
+              <div class="d-flex justify-content-end button mb-3">
+                <button id="tryAgain">
+                  <i class="fa-solid fa-paper-plane pe-2"></i> Try Again?
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ?---BootStrap-JS -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <!-- ?----JQuery -->
+    <script src="./JS/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <!-- ?---JS-File -->
+    <script type="module" src="./JS/main.js" ></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+body{
+    background-image: linear-gradient(to right , rgba(0, 0, 0, 0.364) , rgba(0, 0, 0, 0.364)) , url(../image/Artboard-12-2.png);
+    background-position: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+main{
+    width: 100%;
+}
+
+.bg{
+    background-color: #eeeeeeb8;
+    border-radius: 10px;
+}
+.title h1{
+    color: white;
+    font-size:56px;
+    font-weight: bold;
+    text-align: center;
+}
+/* !----Setting-Data */
+label{
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+main .container .row .button button{
+    /* width: 120px; */
+    padding: 14px;
+    font-size: 19px;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    background-color: black;
+    color: white;
+    margin-top: 15px;
+}
+.show{
+    display: none;
+}
+/* !-----Questions */
+ul{
+    list-style: none;
+}
+/* !----Score */
+#getScore{
+    font-weight: bold;
+    font-size: 46px;
+}
+h3{
+    font-size: 39px;
+    font-weight: bold;
+}
+#corect,#inCorect{
+    display: none;
+}
